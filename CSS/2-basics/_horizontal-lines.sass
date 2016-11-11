@@ -1,10 +1,7 @@
-=horizontal-line($length, $bg-color)
+=horizontal-line($length, $bg-color, $margin-top, $margin-left-right, $margin-bottom)
+  content: ''
+  display: block
   height: 3px
   width: $length
   background: $bg-color
-
-.medium-hr
-  +horizontal-line(240px, $cream)
-
-.large-hr
-  +horizontal-line(520px, $cream)
+  margin: $margin-top $margin-left-right $margin-bottom

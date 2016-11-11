@@ -1,0 +1,20 @@
+=cta($width, $bg-color, $margin-top)
+  width: $width
+  min-height: 40px
+  line-height: 40px
+  text-transform: uppercase
+  margin: $margin-top auto 0
+  display: block
+  border: none
+  border-radius: 10px
+  background: $bg-color
+  color: $cream
+  font-family: $sans-font
+  font-weight: bold
+  box-shadow: $box-dropshadow
+  transition: $main-transition
+  outline: none
+
+  &:hover
+    box-shadow: $box-hover-dropshadow
+    background: darken($bg-color, 5%)

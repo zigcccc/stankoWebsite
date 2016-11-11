@@ -1,5 +1,9 @@
 .landing-section
-  background: $light-blue
+  background-color: $light-blue
+  background:
+    image: url("../IMG/square_bg.png")
+    repeat: repeat
+    //size: 100px 100px
   height: 100vh
   box-shadow: $box-dropshadow
 
@@ -9,7 +13,7 @@
     position: absolute
     bottom: 0
     right: 0
-    transform: scale(1.5)
+    transform: scale(1)
 
   .section-heading
     margin-top: 120px
@@ -24,10 +28,7 @@
       margin-bottom: 0
 
       &::before
-        content: ""
-        display: block
-        +horizontal-line(240px, $cream)
-        margin: 6px auto 0
+        +horizontal-line(240px, $cream, 6px, auto, 0)
 
     h2
       color: $cream
@@ -38,17 +39,17 @@
       margin-top: 0
 
       &::after
-        content: ""
-        display: block
-        +horizontal-line(520px, $cream)
-        margin: 15px auto 0
+        +horizontal-line(520px, $cream, 15px, auto, 0)
 
-  .lead
-    max-width: 475px
-    text-align: center
-    color: $medium-gray
-    font-family: $sans-font
-    margin: 20px auto 0
+    .lead
+      max-width: 475px
+      text-align: center
+      color: $medium-gray
+      font-family: $sans-font
+      margin: 20px auto 0
+
+    .main-cta
+      +cta(300px, $flat-orange, 70px)
 
 
 
@@ -56,9 +57,10 @@
   display: block
   position: absolute
   bottom: 0
-  height: 5vh
+  height: 40px
   background: $dark-gray
   width: 100vw
+  z-index: 100
 
   .material-icons
     color: transparentize($cream, 0.3)
@@ -70,3 +72,27 @@
     &:hover
       color: $flat-orange
       cursor: pointer
+
+.predstavitev-pasme
+  height: 500px
+  h2
+    +section-heading($dark-green)
+
+  img
+    +position(absolute, null 0 0 null)
+    height: 500px
+
+  h3
+    +section-subheading($dark-gray, 60px)
+
+    &::after
+      +horizontal-line(85px, $dark-gray, 10px, 0, 10px)
+
+  .section-cta
+    +cta(100%, $dark-green, 10px)
+
+
+
+
+
+
