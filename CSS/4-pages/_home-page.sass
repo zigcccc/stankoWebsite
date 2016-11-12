@@ -49,7 +49,7 @@
       margin: 20px auto 0
 
     .main-cta
-      +cta(300px, $flat-orange, 70px)
+      +cta(300px, $flat-orange, $cream, 70px)
 
 
 
@@ -76,7 +76,7 @@
 
 
 .predstavitev-pasme
-  height: 500px
+  min-height: 500px
   h2
     +section-heading($dark-green)
 
@@ -91,8 +91,132 @@
       +horizontal-line(85px, $dark-gray, 10px, 0, 10px)
 
   .section-cta
-    +cta(100%, $dark-green, 10px)
+    +cta(100%, $dark-green, $cream, 10px)
 
+
+.predstavitev-lastnika
+  min-height: 500px
+  background:
+    color: $light-gray
+    image: url('../IMG/contemporary_china.png')
+    repeat: repeat
+    blend-mode: multiply
+
+  h2
+    +section-heading($cream)
+
+  img
+    +position(absolute, null null 0 0)
+    height: 500px
+
+  h3
+    +section-subheading($dark-gray, 60px)
+    text-align: right
+
+    &::after
+      +horizontal-line(85px, $dark-gray, 10px, 0, 10px)
+      position: absolute
+      right: 20px
+
+  .section-text
+    color: $dark-gray
+    margin-top: 20px
+    text-align: right
+
+  .section-cta
+    +cta(100%, $cream, $dark-gray, 30px)
+
+
+.section-galerija
+  min-height: 500px
+  //background:
+    color: $light-gray
+    image: url('../IMG/contemporary_china.png')
+    repeat: repeat
+    blend-mode: multiply
+
+  .image-row
+    height: 210px
+    margin: 20px 0
+    display: flex
+
+    [class^="col"]
+      overflow: hidden
+      height: 100%
+      box-sizing: border-box
+      margin-right: 20px
+      padding: 0
+      background:
+        size: cover
+        position: center center
+      &:last-child
+        margin-right: 0
+
+  h2
+    +section-heading($dark-green)
+    margin-bottom: 65px
+
+  img
+    +position(absolute, null null 0 0)
+    height: 500px
+
+  h3
+    +section-subheading($dark-gray, 60px)
+    text-align: right
+
+    &::after
+      +horizontal-line(85px, $dark-gray, 10px, 0, 10px)
+      position: absolute
+      right: 20px
+
+  .section-cta
+    +cta(100%, $dark-green, $cream, 30px)
+
+
+.section-blog
+  min-height: 500px
+  background:
+    color: $flat-orange
+    image: url('../IMG/contemporary_china.png')
+    repeat: repeat
+    blend-mode: multiply
+
+  .image-row
+    height: 210px
+    margin: 20px 0
+    display: flex
+
+    [class^="col"]
+      overflow: hidden
+      height: 100%
+      box-sizing: border-box
+      margin-right: 20px
+      padding: 0
+      background:
+        size: cover
+        position: center center
+      &:last-child
+        margin-right: 0
+
+  h2
+    +section-heading($cream)
+    margin-bottom: 55px
+
+  img
+    +position(absolute, null null 0 0)
+    height: 500px
+
+  h3
+    +section-subheading($dark-gray, 60px)
+    text-align: right
+
+    &::after
+      +horizontal-line(85px, $dark-gray, 10px, 0, 10px)
+      position: absolute
+      right: 20px
+
+  .section-cta
+    +cta(100%, $cream, $flat-orange, 30px)
 
 
 
