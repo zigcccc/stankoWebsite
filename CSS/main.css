@@ -251,6 +251,7 @@ a {
 
 .jumbotron {
   margin-bottom: 0;
+  padding-bottom: 45px;
   position: relative; }
 
 .landing-section {
@@ -341,7 +342,7 @@ a {
       cursor: pointer; }
 
 .predstavitev-pasme {
-  height: 500px; }
+  min-height: 500px; }
   .predstavitev-pasme h2 {
     color: #145e5e;
     font-family: "Noto Serif", serif;
@@ -387,5 +388,200 @@ a {
     .predstavitev-pasme .section-cta:hover {
       box-shadow: 0px 17px 50px 0px rgba(0, 0, 0, 0.19), 0px 12px 15px 0px rgba(0, 0, 0, 0.24);
       background: #104949; }
+
+.predstavitev-lastnika {
+  min-height: 500px;
+  background-color: #8f8f90;
+  background-image: url("../IMG/contemporary_china.png");
+  background-repeat: repeat;
+  background-blend-mode: multiply; }
+  .predstavitev-lastnika h2 {
+    color: #e5e5e5;
+    font-family: "Noto Serif", serif;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.16), 0px 2px 5px rgba(0, 0, 0, 0.26);
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .predstavitev-lastnika img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 500px; }
+  .predstavitev-lastnika h3 {
+    color: #24272b;
+    font-family: "Noto Sans", sans-serif;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.16), 0px 2px 5px rgba(0, 0, 0, 0.26);
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 60px;
+    text-align: right; }
+    .predstavitev-lastnika h3::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 85px;
+      background: #24272b;
+      margin: 10px 0 10px;
+      position: absolute;
+      right: 20px; }
+  .predstavitev-lastnika .section-text {
+    color: #24272b;
+    margin-top: 20px;
+    text-align: right; }
+  .predstavitev-lastnika .section-cta {
+    width: 100%;
+    min-height: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+    margin: 30px auto 0;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    background: #e5e5e5;
+    color: #24272b;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bold;
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.19), 0px 8px 17px 0px rgba(0, 0, 0, 0.2);
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none; }
+    .predstavitev-lastnika .section-cta:hover {
+      box-shadow: 0px 17px 50px 0px rgba(0, 0, 0, 0.19), 0px 12px 15px 0px rgba(0, 0, 0, 0.24);
+      background: #d8d8d8; }
+
+.section-galerija {
+  min-height: 500px; }
+  .section-galerija .image-row {
+    height: 210px;
+    margin: 20px 0;
+    display: flex; }
+    .section-galerija .image-row [class^="col"] {
+      overflow: hidden;
+      height: 100%;
+      box-sizing: border-box;
+      margin-right: 20px;
+      padding: 0;
+      background-size: cover;
+      background-position: center center; }
+      .section-galerija .image-row [class^="col"]:last-child {
+        margin-right: 0; }
+  .section-galerija h2 {
+    color: #145e5e;
+    font-family: "Noto Serif", serif;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.16), 0px 2px 5px rgba(0, 0, 0, 0.26);
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 65px; }
+  .section-galerija img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 500px; }
+  .section-galerija h3 {
+    color: #24272b;
+    font-family: "Noto Sans", sans-serif;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.16), 0px 2px 5px rgba(0, 0, 0, 0.26);
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 60px;
+    text-align: right; }
+    .section-galerija h3::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 85px;
+      background: #24272b;
+      margin: 10px 0 10px;
+      position: absolute;
+      right: 20px; }
+  .section-galerija .section-cta {
+    width: 100%;
+    min-height: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+    margin: 30px auto 0;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    background: #145e5e;
+    color: #e5e5e5;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bold;
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.19), 0px 8px 17px 0px rgba(0, 0, 0, 0.2);
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none; }
+    .section-galerija .section-cta:hover {
+      box-shadow: 0px 17px 50px 0px rgba(0, 0, 0, 0.19), 0px 12px 15px 0px rgba(0, 0, 0, 0.24);
+      background: #104949; }
+
+.section-blog {
+  min-height: 500px;
+  background-color: #e8614a;
+  background-image: url("../IMG/contemporary_china.png");
+  background-repeat: repeat;
+  background-blend-mode: multiply; }
+  .section-blog .image-row {
+    height: 210px;
+    margin: 20px 0;
+    display: flex; }
+    .section-blog .image-row [class^="col"] {
+      overflow: hidden;
+      height: 100%;
+      box-sizing: border-box;
+      margin-right: 20px;
+      padding: 0;
+      background-size: cover;
+      background-position: center center; }
+      .section-blog .image-row [class^="col"]:last-child {
+        margin-right: 0; }
+  .section-blog h2 {
+    color: #e5e5e5;
+    font-family: "Noto Serif", serif;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.16), 0px 2px 5px rgba(0, 0, 0, 0.26);
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 55px; }
+  .section-blog img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 500px; }
+  .section-blog h3 {
+    color: #24272b;
+    font-family: "Noto Sans", sans-serif;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.16), 0px 2px 5px rgba(0, 0, 0, 0.26);
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 60px;
+    text-align: right; }
+    .section-blog h3::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 85px;
+      background: #24272b;
+      margin: 10px 0 10px;
+      position: absolute;
+      right: 20px; }
+  .section-blog .section-cta {
+    width: 100%;
+    min-height: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+    margin: 30px auto 0;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    background: #e5e5e5;
+    color: #e8614a;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bold;
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.19), 0px 8px 17px 0px rgba(0, 0, 0, 0.2);
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none; }
+    .section-blog .section-cta:hover {
+      box-shadow: 0px 17px 50px 0px rgba(0, 0, 0, 0.19), 0px 12px 15px 0px rgba(0, 0, 0, 0.24);
+      background: #d8d8d8; }
 
 /*# sourceMappingURL=main.css.map */
