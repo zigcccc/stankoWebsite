@@ -340,7 +340,7 @@ a {
   z-index: 100; }
   .social-banner .material-icons {
     color: rgba(229, 229, 229, 0.7);
-    line-height: 5vh;
+    line-height: 40px;
     text-align: center;
     width: 100%;
     transition: ease-in-out all 0.3s; }
