@@ -254,6 +254,13 @@ a {
   padding-bottom: 45px;
   position: relative; }
 
+.card-img {
+  width: 100%;
+  height: 185px;
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 10px; }
+
 .landing-section {
   background-color: #33c4c4;
   background-image: url("../IMG/square_bg.png");
@@ -329,7 +336,7 @@ a {
   bottom: 0;
   height: 40px;
   background: #24272b;
-  width: 100vw;
+  width: 100%;
   z-index: 100; }
   .social-banner .material-icons {
     color: rgba(229, 229, 229, 0.7);
@@ -517,23 +524,11 @@ a {
 .section-blog {
   min-height: 500px;
   background-color: #e8614a;
-  background-image: url("../IMG/contemporary_china.png");
+  background-image: url("../IMG/sayagata-400px.png");
   background-repeat: repeat;
   background-blend-mode: multiply; }
-  .section-blog .image-row {
-    height: 210px;
-    margin: 20px 0;
-    display: flex; }
-    .section-blog .image-row [class^="col"] {
-      overflow: hidden;
-      height: 100%;
-      box-sizing: border-box;
-      margin-right: 20px;
-      padding: 0;
-      background-size: cover;
-      background-position: center center; }
-      .section-blog .image-row [class^="col"]:last-child {
-        margin-right: 0; }
+  .section-blog .blog-row {
+    margin-top: 10px; }
   .section-blog h2 {
     color: #e5e5e5;
     font-family: "Noto Serif", serif;
@@ -543,27 +538,23 @@ a {
     text-transform: uppercase;
     margin-bottom: 55px; }
   .section-blog img {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 500px; }
+    width: 100%;
+    margin-bottom: 20px; }
   .section-blog h3 {
     color: #24272b;
     font-family: "Noto Sans", sans-serif;
     text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.16), 0px 2px 5px rgba(0, 0, 0, 0.26);
     font-size: 36px;
     font-weight: bold;
-    margin-top: 60px;
-    text-align: right; }
+    margin-top: 0px;
+    text-align: left; }
     .section-blog h3::after {
       content: "";
       display: block;
       height: 3px;
       width: 85px;
       background: #24272b;
-      margin: 10px 0 10px;
-      position: absolute;
-      right: 20px; }
+      margin: 10px 0 0px; }
   .section-blog .section-cta {
     width: 100%;
     min-height: 40px;
@@ -583,5 +574,115 @@ a {
     .section-blog .section-cta:hover {
       box-shadow: 0px 17px 50px 0px rgba(0, 0, 0, 0.19), 0px 12px 15px 0px rgba(0, 0, 0, 0.24);
       background: #d8d8d8; }
+  .section-blog .card {
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1); }
+    .section-blog .card:hover {
+      box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.19), 0px 8px 17px 0px rgba(0, 0, 0, 0.2); }
+  .section-blog .card-cta {
+    width: 105px;
+    min-height: 36px;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px 0 10px;
+    display: block;
+    border-radius: 5px;
+    background: #24272b;
+    color: #e5e5e5;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.19), 0px 8px 17px 0px rgba(0, 0, 0, 0.2);
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+    float: right; }
+    .section-blog .card-cta::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .section-blog .card-cta:hover {
+      box-shadow: 0px 17px 50px 0px rgba(0, 0, 0, 0.19), 0px 12px 15px 0px rgba(0, 0, 0, 0.24);
+      background: #181a1d;
+      text-decoration: none; }
+  .section-blog .card-text {
+    margin-top: 10px !important; }
+
+.kontakt {
+  min-height: 500px;
+  background-color: #145e5e;
+  background-image: url("../IMG/cartographer.png");
+  background-repeat: repeat;
+  background-blend-mode: multiply;
+  margin-bottom: 225px; }
+  .kontakt h2 {
+    color: #e5e5e5;
+    font-family: "Noto Serif", serif;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.16), 0px 2px 5px rgba(0, 0, 0, 0.26);
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .kontakt form {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    margin-top: 30px; }
+    .kontakt form textarea {
+      height: 206px; }
+    .kontakt form label {
+      color: #e5e5e5;
+      margin-left: 10px;
+      text-transform: uppercase;
+      font-family: "Noto Sans", sans-serif;
+      font-size: 12px; }
+    .kontakt form .send-icon svg {
+      transform: scale(0.5); }
+      .kontakt form .send-icon svg .icon-fill {
+        fill: #e5e5e5;
+        transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1); }
+      .kontakt form .send-icon svg:hover .icon-arrow {
+        transform: translateX(2px);
+        transform-origin: left center; }
+  .kontakt .google-maps {
+    min-height: 450px; }
+    .kontakt .google-maps img {
+      display: block;
+      margin: 70px auto 0;
+      box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.19), 0px 8px 17px 0px rgba(0, 0, 0, 0.2); }
+
+footer {
+  min-height: 225px;
+  background: #3e4651;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  z-index: -10; }
+  footer .row {
+    margin: 0; }
+  footer h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #e5e5e5;
+    font-weight: bold;
+    margin: 40px 0 25px; }
+  footer .menu ul {
+    text-align: center; }
+    footer .menu ul li {
+      display: inline;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-family: "Noto Sans", sans-serif;
+      font-weight: bold;
+      color: #e5e5e5;
+      line-height: 60px;
+      padding: 0 10px; }
+  footer small {
+    text-align: center;
+    color: #e5e5e5;
+    display: block; }
 
 /*# sourceMappingURL=main.css.map */
