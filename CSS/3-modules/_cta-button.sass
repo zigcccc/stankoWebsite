@@ -18,3 +18,27 @@
   &:hover
     box-shadow: $box-hover-dropshadow
     background: darken($bg-color, 5%)
+
+=card-cta()
+  width: 105px
+  min-height: 36px
+  line-height: 36px
+  text-transform: uppercase
+  text-align: center
+  margin: 20px 0 10px
+  display: block
+  border-radius: 5px
+  background: $dark-gray
+  color: $cream
+  font-family: $sans-font
+  font-size: 10px
+  font-weight: bold
+  box-shadow: $box-dropshadow
+  transition: $main-transition
+  outline: none
+  float: right
+  +clearfix
+  &:hover
+    box-shadow: $box-hover-dropshadow
+    background: darken($dark-gray, 5%)
+    text-decoration: none

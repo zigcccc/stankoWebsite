@@ -52,14 +52,13 @@
       +cta(300px, $flat-orange, $cream, 70px)
 
 
-
 .social-banner
   display: block
   position: absolute
   bottom: 0
   height: 40px
   background: $dark-gray
-  width: 100vw
+  width: 100%
   z-index: 100
 
   .material-icons
@@ -72,7 +71,6 @@
     &:hover
       color: $flat-orange
       cursor: pointer
-
 
 
 .predstavitev-pasme
@@ -177,48 +175,124 @@
   min-height: 500px
   background:
     color: $flat-orange
-    image: url('../IMG/contemporary_china.png')
+    image: url('../IMG/sayagata-400px.png')
     repeat: repeat
     blend-mode: multiply
 
-  .image-row
-    height: 210px
-    margin: 20px 0
-    display: flex
-
-    [class^="col"]
-      overflow: hidden
-      height: 100%
-      box-sizing: border-box
-      margin-right: 20px
-      padding: 0
-      background:
-        size: cover
-        position: center center
-      &:last-child
-        margin-right: 0
+  .blog-row
+    margin-top: 10px
 
   h2
     +section-heading($cream)
     margin-bottom: 55px
 
   img
-    +position(absolute, null null 0 0)
-    height: 500px
+    width: 100%
+    margin-bottom: 20px
 
   h3
-    +section-subheading($dark-gray, 60px)
-    text-align: right
+    +section-subheading($dark-gray, 0px)
+    text-align: left
 
     &::after
-      +horizontal-line(85px, $dark-gray, 10px, 0, 10px)
-      position: absolute
-      right: 20px
+      +horizontal-line(85px, $dark-gray, 10px, 0, 0px)
 
   .section-cta
     +cta(100%, $cream, $flat-orange, 30px)
 
+  .card
+    transition: $main-transition
+    &:hover
+      box-shadow: $box-dropshadow
+
+  .card-cta
+    +card-cta()
+
+  .card-text
+    margin-top: 10px !important
 
 
+.kontakt
+  min-height: 500px
+  background:
+    color: $dark-green
+    image: url('../IMG/cartographer.png')
+    repeat: repeat
+    blend-mode: multiply
+  margin-bottom: 225px
+
+  h2
+    +section-heading($cream)
+
+  form
+    +display(flex)
+    align-items: center
+    margin-top: 30px
+
+    textarea
+      height: 206px
+
+    label
+      color: $cream
+      margin-left: 10px
+      text-transform: uppercase
+      font-family: $sans-font
+      font-size: 12px
+
+    .send-icon
+      svg
+        transform: scale(0.5)
+        .icon-fill
+          fill: $cream
+          transition: $main-transition
+        &:hover
+          .icon-arrow
+            transform: translateX(2px)
+            transform-origin: left center
+
+  .google-maps
+    min-height: 450px
+
+    img
+      display: block
+      margin: 70px auto 0
+      box-shadow: $box-dropshadow
+
+
+footer
+  min-height: 225px
+  background: $medium-gray
+  position: fixed
+  bottom: 0
+  width: 100vw
+  z-index: -10
+
+  .row
+    margin: 0
+
+  h2
+    text-align: center
+    text-transform: uppercase
+    color: $cream
+    font-weight: bold
+    margin: 40px 0 25px
+
+  .menu
+    ul
+      text-align: center
+      li
+        display: inline
+        font-size: 16px
+        text-transform: uppercase
+        font-family: $sans-font
+        font-weight: bold
+        color: $cream
+        line-height: 60px
+        padding: 0 10px
+
+  small
+    text-align: center
+    color: $cream
+    display: block
 
 
