@@ -19,6 +19,28 @@
     box-shadow: $box-hover-dropshadow
     background: darken($bg-color, 5%)
 
+=absolute-cta($width, $bg-color, $font-color, $margin-top)
+  width: $width
+  min-height: 40px
+  line-height: 40px
+  text-transform: uppercase
+  margin: $margin-top auto 0
+  display: block
+  border: none
+  border-radius: 10px
+  background: $bg-color
+  color: $font-color
+  font-family: $sans-font
+  font-weight: bold
+  box-shadow: $box-dropshadow
+  transition: $main-transition
+  outline: none
+  +position(absolute, null 0 45px 0)
+
+  &:hover
+    box-shadow: $box-hover-dropshadow
+    background: darken($bg-color, 5%)
+
 =card-cta()
   width: 105px
   min-height: 36px

@@ -74,13 +74,32 @@
 
 
 .predstavitev-pasme
-  min-height: 500px
+  max-height: 500px
+  transition: $main-transition
+  overflow: hidden
+  .row
+    margin-bottom: 50px
+  &.expanded
+    max-height: 2000px
+
+    .row
+      margin-bottom: 0
+
+    img
+      opacity: 0
+
+    .extra-content
+      opacity: 1
+      transform: translateY(0)
+      display: block
+
   h2
     +section-heading($dark-green)
 
   img
     +position(absolute, null 0 0 null)
     height: 500px
+    transition: $main-transition
 
   h3
     +section-subheading($dark-gray, 60px)
@@ -88,8 +107,15 @@
     &::after
       +horizontal-line(85px, $dark-gray, 10px, 0, 10px)
 
+  .extra-content
+    opacity: 0
+    transform: translateY(-1000px)
+    transition: $main-transition
+    margin-bottom: 50px !important
+    display: none
+
   .section-cta
-    +cta(100%, $dark-green, $cream, 10px)
+    +absolute-cta(255px, $dark-green, $cream, 10px)
 
 
 .predstavitev-lastnika
@@ -99,6 +125,13 @@
     image: url('../IMG/contemporary_china.png')
     repeat: repeat
     blend-mode: multiply
+
+  &.expanded
+    min-height: 1000px
+
+    img
+      opacity: 0
+      
 
   h2
     +section-heading($cream)
@@ -122,7 +155,7 @@
     text-align: right
 
   .section-cta
-    +cta(100%, $cream, $dark-gray, 30px)
+    +absolute-cta(255px, $cream, $dark-gray, 30px)
 
 
 .section-galerija
