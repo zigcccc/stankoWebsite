@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
   <title><?php echo get_bloginfo('title'); ?></title>
   <?php wp_head(); ?>
 </head>
@@ -13,6 +13,7 @@
         </a>
       </div>
       <?php wp_nav_menu(); ?>
+      <div class="mobile-menu-toggle"><i class="material-icons">menu</i></div>
   </nav>
 
 <?php ?>

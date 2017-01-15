@@ -21,15 +21,29 @@
     padding-top: 7.5px
     float: right
     +clearfix
+    @media screen and (max-width: 575px)
+      display: none
+      &.active-mobile-menu
+        display: block
+        width: 100%
+        position: absolute
+        top: 40px
+        z-index: 100
+        background: $light-blue
+        box-shadow: $box-dropshadow
     ul
       list-style: none
       text-align: center
       padding: 0
       +display(flex)
       +justify-content(space-around)
+      @media screen and (max-width: 575px)
+        display: block
 
       li
         width: 100%
+        @media screen and (max-width: 575px)
+          padding: 10px 0
 
         a
           color: $cream
@@ -42,3 +56,19 @@
           &:hover
             text-decoration: none
             text-shadow: $text-dropshadow
+
+  .mobile-menu-toggle
+    display: none
+
+    i
+      color: $cream
+      font-weight: bold
+      line-height: 40px
+      padding-right: 10px
+      &:hover
+        text-shadow: $text-dropshadow
+        cursor: pointer
+    @media screen and (max-width: 575px)
+      display: block
+      float: right
+      +clearfix
