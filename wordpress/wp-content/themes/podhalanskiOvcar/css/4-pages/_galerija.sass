@@ -1,0 +1,76 @@
+.page-galerija
+  .main-nav
+    background: $dark-green
+
+  .galerija-jumbotron
+    height: auto
+    &.last-elem
+      margin-bottom: 220px
+    &:nth-of-type(2n)
+      background: $dark-green
+      background-blend-mode: multiply
+
+      h3
+        color: $cream
+        &::after
+          +horizontal-line(250px, $cream, 6px, 0, 0)
+
+      .expand-gallery
+        +cta(100%, $cream, $dark-green, 30px)
+
+  h3
+    color: $dark-green
+    text-transform: uppercase
+    font-weight: bold
+    font-family: $serif-font
+    text-shadow: $text-dropshadow
+    font-size: 36px
+    margin-left: 50px
+    margin-bottom: 30px
+    &::after
+      +horizontal-line(250px, $dark-green, 6px, 0, 0)
+
+  .row
+    //max-height: 300px
+    overflow: hidden
+    margin: 10px 0
+
+  .row-images-extra
+    display: none
+    &.show
+      display: block
+
+  [class^="col"]
+    overflow: hidden
+    max-height: 300px
+    @media screen and (max-width: 767px)
+      margin: 20px 0
+
+  .gallery-image
+    max-height: 300px
+    width: auto
+    display: block
+    margin: 0 auto
+    &:hover
+      cursor: pointer
+
+  .expand-gallery
+    +cta(100%, $dark-green, $cream, 30px)
+
+  .image-canvas
+    width: 100vw
+    height: 100vh
+    background: transparentize(black, 0.3)
+    position: fixed
+    z-index: 100
+    top: 0
+    display: none
+    &.active
+      +display(flex)
+      +align-items(center)
+      +justify-content(center)
+
+    .gallery-image
+      max-height: none
+      z-index: 1000
+      position: absolute

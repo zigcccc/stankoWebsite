@@ -1,0 +1,491 @@
+.landing-section
+  background-color: $light-blue
+  background:
+    image: url("../img/square_bg.png")
+    repeat: repeat
+    //size: 100px 100px
+  height: calc(100vh - 40px)
+  @media screen and (max-width: 767px)
+    height: 100vh
+
+  box-shadow: $box-dropshadow
+
+  img
+    //height: 100vh
+    width: auto
+    position: absolute
+    bottom: 0
+    right: 0
+    max-height: 500px
+    @media screen and (max-width: 1315px)
+      display: none
+
+  .section-heading
+    margin-top: 60px
+    width: auto
+    display: inline-block
+    @media screen and (max-width: 1315px)
+      margin: 60px auto 0
+      display: block
+
+    h1
+      color: $cream
+      text-transform: uppercase
+      font-size: 65px
+      text-shadow: $text-dropshadow
+      margin-bottom: 0
+      @media screen and (max-width: 1315px)
+        text-align: center
+      @media screen and (max-width: 550px)
+        font-size: 58px
+      @media screen and (max-width: 476px)
+        font-size: 48px
+
+      &::before
+        +horizontal-line(250px, $cream, 6px, auto, 0)
+        @media screen and (max-width: 550px)
+          +horizontal-line(50%, $cream, 6px, auto, 0)
+
+    h2
+      color: $cream
+      font-family: $sans-font
+      font-size: 45px
+      text-shadow: $text-dropshadow
+      text-align: center
+      margin-top: 0
+      @media screen and (max-width: 476px)
+        font-size: 38px
+
+      &::after
+        +horizontal-line(520px, $cream, 15px, auto, 0)
+        @media screen and (max-width: 550px)
+          +horizontal-line(80%, $cream, 15px, auto, 0)
+
+    .lead
+      max-width: 475px
+      text-align: center
+      color: $medium-gray
+      font-family: $sans-font
+      margin: 20px auto 0
+      @media screen and (max-width: 767px)
+        font-size: 14px
+
+    .main-cta
+      +cta(300px, $flat-orange, $cream, 70px)
+      @media screen and (max-width: 991px)
+        +cta(300px, $flat-orange, $cream, 35px)
+      @media screen and (max-width: 767px)
+        +cta(300px, $flat-orange, $cream, 15px)
+      @media screen and (max-width: 767px)
+        +cta(300px, $flat-orange, $cream, 30px)
+
+.social-banner
+  display: block
+  position: absolute
+  bottom: 0
+  height: 40px
+  background: $dark-gray
+  width: 100%
+  z-index: 100
+  @media screen and (max-width: 767px)
+    height: auto
+  a
+    display: block
+    &:active
+      text-decoration: none
+    &:focus
+      text-decoration: none
+    &:hover
+      text-decoration: none
+      .socicon
+        color: $flat-orange
+        cursor: pointer
+
+    .socicon
+      color: transparentize($cream, 0.3)
+      line-height: 40px
+      text-align: center
+      font-size: 30px
+      width: 100%
+      transition: ease-in-out all 0.3s
+      &::before
+        font-size: 20px
+        line-height: 40px
+        display: block
+
+
+.static-section
+  max-height: 500px
+  @media screen and (max-width: 991px)
+    max-height: none
+  transition: $expand-transition
+  overflow: hidden
+  background-blend-mode: multiply
+  .row
+    margin-bottom: 50px
+  &.expanded
+    max-height: 2000px
+
+    .row
+      margin-bottom: 0
+
+    img
+      opacity: 0
+      transition: $expand-transition
+      display: none
+      max-height: 0
+      +position(absolute, null -100% 0 null)
+
+    .extra-content
+      opacity: 1
+      transform: translateY(0)
+      display: block
+
+  h2
+    +section-heading($dark-green)
+
+  img
+    +position(absolute, null 0 0 null)
+    max-height: 500px
+    transition: $expand-transition
+    @media screen and (max-width: 991px)
+      display: none
+
+  h3
+    +section-subheading($dark-gray, 60px)
+
+    &::after
+      +horizontal-line(85px, $dark-gray, 10px, 0, 10px)
+
+  .extra-content
+    opacity: 0
+    transform: translateY(-1000px)
+    //transition: $main-transition
+    margin-bottom: 50px !important
+    display: none
+
+  .section-cta
+    +absolute-cta(255px, $dark-green, $cream, 10px)
+    @media screen and (max-width: 991px)
+      +cta(300px, $dark-green, $cream, 20px)
+      position: relative
+      bottom: 0
+
+  &:nth-child(2n+2)
+    min-height: auto
+    background:
+      color: $light-gray
+      image: url('../img/contemporary_china.png')
+      repeat: repeat
+      blend-mode: multiply
+
+    &.expanded
+      min-height: auto
+      img
+        opacity: 0
+
+    h2
+      +section-heading($cream)
+
+    img
+      +position(absolute, null null 0 0)
+      height: 500px
+
+    h3
+      +section-subheading($dark-gray, 60px)
+      text-align: right
+      @media screen and (max-width: 767px)
+        text-align: left
+
+      &::after
+        +horizontal-line(85px, $dark-gray, 10px, 0, 10px)
+        position: absolute
+        right: 20px
+        @media screen and (max-width: 767px)
+          left: 20px
+
+    h4
+      +section-extrainfo-subheading($dark-gray)
+      text-align: right
+      @media screen and (max-width: 767px)
+        text-align: left
+
+    .section-text
+      color: $dark-gray
+      margin-top: 20px
+      text-align: right
+      @media screen and (max-width: 767px)
+        text-align: left
+
+    .section-cta
+      +absolute-cta(255px, $cream, $dark-gray, 30px)
+
+  .extra-info
+    margin-top: -50%
+    @media screen and (max-width: 767px)
+      margin-top: 10px
+    .extra-info-sliders
+      margin: 40px 0
+      position: relative
+
+      h4
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 18px
+      .extra-info-slider-value
+        height: 10px
+        border-radius: 2px
+        background: $dark-green
+        display: block
+        position: relative
+      .full-width
+        position: absolute
+        display: block
+        width: 100%
+        height: 10px
+        margin-top: -10px
+        background: transparentize($dark-green, 0.6)
+
+  .extra-contact-info
+    text-align: right
+    @media screen and (max-width: 767px)
+      text-align: left
+
+    .extra-contact-info-group
+      margin: 20px 0
+
+      h4
+        text-align: right
+        @media screen and (max-width: 767px)
+          text-align: left
+        text-transform: uppercase
+        font-size: 20px
+        margin: 5px 0
+
+      strong
+        color: $cream
+        font-size: 16px
+    .first-info
+      margin-top: 0
+
+.gallery
+  min-height: 500px
+  //background:
+    color: $light-gray
+    image: url('../img/contemporary_china.png')
+    repeat: repeat
+    blend-mode: multiply
+
+  .image-row
+    height: 210px
+    margin: 20px 0
+    +display(flex)
+    @media screen and (max-width: 575px)
+      display: block
+
+    &.last-image-row
+      @media screen and (max-width: 575px)
+        display: none
+
+    [class^="col"]
+      overflow: hidden
+      height: 100%
+      box-sizing: border-box
+      margin-right: 20px
+      padding: 0
+      background:
+        size: cover
+        position: center center
+      &:last-child
+        margin-right: 0
+
+  h2
+    +section-heading($dark-green)
+    margin-bottom: 65px
+
+  img
+    +position(absolute, null null 0 0)
+    height: 500px
+
+  h3
+    +section-subheading($dark-gray, 60px)
+    text-align: right
+
+    &::after
+      +horizontal-line(85px, $dark-gray, 10px, 0, 10px)
+      position: absolute
+      right: 20px
+
+  a
+    &:hover
+      text-decoration: none
+    &:focus
+      text-decoration: none
+    .section-cta
+      +cta(100%, $dark-green, $cream, 30px)
+
+
+.blog
+  min-height: 500px
+  background:
+    color: $flat-orange
+    image: url('../img/sayagata-400px.png')
+    repeat: repeat
+    blend-mode: multiply
+
+  .blog-row
+    margin-top: 10px
+    +display(flex)
+    +flex-wrap(wrap)
+
+  div[class*='col-']
+    +display(flex)
+
+
+  h2
+    +section-heading($cream)
+    margin-bottom: 55px
+
+  img
+    width: 100%
+    margin-bottom: 20px
+
+  h3
+    +section-subheading($dark-gray, 0px)
+    text-align: left
+
+    &::after
+      +horizontal-line(85px, $dark-gray, 10px, 0, 0px)
+
+  a
+    width: 100%
+    &:hover
+      text-decoration: none
+    &:focus
+      text-decoration: none
+    .section-cta
+      +cta(100%, $cream, $flat-orange, 30px)
+
+  .card
+    transition: $main-transition
+    &:hover
+      box-shadow: $box-dropshadow
+
+  .card-cta
+    +card-cta()
+
+  .card-text
+    margin-top: 10px !important
+    padding-bottom: 40px
+
+
+.kontakt
+  min-height: 500px
+  background:
+    color: $dark-green
+    image: url('../img/cartographer.png')
+    repeat: repeat
+    blend-mode: multiply
+  margin-bottom: 225px
+
+  h2
+    +section-heading($cream)
+
+  form
+    display: block
+    margin-top: 30px
+
+    textarea
+      height: 206px
+
+    label
+      color: $cream
+      margin-left: 10px
+      text-transform: uppercase
+      font-family: $sans-font
+      font-size: 12px
+
+    button
+      background: none
+      outline: none
+      border: none
+      margin-top: 95px
+      @media screen and (max-width: 767px)
+        display: block
+        margin: 0 auto
+      //width: 100%
+      img
+        width: 75px
+        height: auto
+        display: block
+        margin: 0 auto
+        @media screen and (max-width: 991px)
+          width: 75px
+        @media screen and (max-width: 767px)
+          width: 75px
+          //text-align: center
+          display: block
+          margin: 0 auto
+
+  .google-maps
+    min-height: 450px
+
+    iframe
+      display: block
+      margin: 70px auto 0
+      box-shadow: $box-dropshadow
+      width: 990px
+      height: 250px
+      @media screen and (max-width: 1200px)
+        width: 800px
+      @media screen and (max-width: 991px)
+        width: 630px
+      @media screen and (max-width: 767px)
+        width: 500px
+      @media screen and (max-width: 533px)
+        width: 90%
+
+
+footer
+  min-height: 225px
+  background: $medium-gray
+  position: fixed
+  bottom: 0
+  width: 100vw
+  z-index: -10
+
+  .logo
+    padding-top: 15px
+    img
+      display: block
+      width: 100px
+      margin: 0 auto
+      height: auto
+
+  .row
+    margin: 0
+
+  h2
+    text-align: center
+    text-transform: uppercase
+    color: $cream
+    font-weight: bold
+    margin: 40px 0 25px
+
+  .menu
+    ul
+      text-align: center
+      li
+        display: inline
+        font-size: 16px
+        text-transform: uppercase
+        font-family: $sans-font
+        font-weight: bold
+        color: $cream
+        line-height: 60px
+        padding: 0 10px
+
+  small
+    text-align: center
+    color: $cream
+    display: block
