@@ -61,6 +61,10 @@ jQuery(document).ready(function($) {
     });
 
 
+    $('.mobile-menu-toggle').on('click', function(){
+      $('.menu-main-menu-container').toggleClass('active-mobile-menu');
+    });
+
     function scrollTo(btnToClick, elem, duration){
         var button = $(btnToClick);
         var elemToScroll = $(elem);
