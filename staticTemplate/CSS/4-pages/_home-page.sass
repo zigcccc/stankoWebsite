@@ -1,0 +1,333 @@
+.landing-section
+  background-color: $light-blue
+  background:
+    image: url("../IMG/square_bg.png")
+    repeat: repeat
+    //size: 100px 100px
+  height: 100vh
+  box-shadow: $box-dropshadow
+
+  img
+    //height: 100vh
+    width: auto
+    position: absolute
+    bottom: 0
+    right: 0
+    transform: scale(1)
+
+  .section-heading
+    margin-top: 120px
+    width: auto
+    display: inline-block
+
+    h1
+      color: $cream
+      text-transform: uppercase
+      font-size: 65px
+      text-shadow: $text-dropshadow
+      margin-bottom: 0
+
+      &::before
+        +horizontal-line(240px, $cream, 6px, auto, 0)
+
+    h2
+      color: $cream
+      font-family: $sans-font
+      font-size: 45px
+      text-shadow: $text-dropshadow
+      text-align: center
+      margin-top: 0
+
+      &::after
+        +horizontal-line(520px, $cream, 15px, auto, 0)
+
+    .lead
+      max-width: 475px
+      text-align: center
+      color: $medium-gray
+      font-family: $sans-font
+      margin: 20px auto 0
+
+    .main-cta
+      +cta(300px, $flat-orange, $cream, 70px)
+
+
+.social-banner
+  display: block
+  position: absolute
+  bottom: 0
+  height: 40px
+  background: $dark-gray
+  width: 100%
+  z-index: 100
+
+  .material-icons
+    color: transparentize($cream, 0.3)
+    line-height: 40px
+    text-align: center
+    width: 100%
+    transition: ease-in-out all 0.3s
+
+    &:hover
+      color: $flat-orange
+      cursor: pointer
+
+
+.predstavitev-pasme
+  max-height: 500px
+  transition: $expand-transition
+  overflow: hidden
+  .row
+    margin-bottom: 50px
+  &.expanded
+    max-height: 2000px
+
+    .row
+      margin-bottom: 0
+
+    img
+      opacity: 0
+      transition: $expand-transition
+      display: none
+
+    .extra-content
+      opacity: 1
+      transform: translateY(0)
+      display: block
+
+  h2
+    +section-heading($dark-green)
+
+  img
+    +position(absolute, null 0 0 null)
+    height: 500px
+    transition: $expand-transition
+
+  h3
+    +section-subheading($dark-gray, 60px)
+
+    &::after
+      +horizontal-line(85px, $dark-gray, 10px, 0, 10px)
+
+  .extra-content
+    opacity: 0
+    transform: translateY(-1000px)
+    //transition: $main-transition
+    margin-bottom: 50px !important
+    display: block
+
+  .section-cta
+    +absolute-cta(255px, $dark-green, $cream, 10px)
+
+
+.predstavitev-lastnika
+  min-height: 500px
+  background:
+    color: $light-gray
+    image: url('../IMG/contemporary_china.png')
+    repeat: repeat
+    blend-mode: multiply
+
+  &.expanded
+    min-height: 1000px
+
+    img
+      opacity: 0
+
+
+  h2
+    +section-heading($cream)
+
+  img
+    +position(absolute, null null 0 0)
+    height: 500px
+
+  h3
+    +section-subheading($dark-gray, 60px)
+    text-align: right
+
+    &::after
+      +horizontal-line(85px, $dark-gray, 10px, 0, 10px)
+      position: absolute
+      right: 20px
+
+  .section-text
+    color: $dark-gray
+    margin-top: 20px
+    text-align: right
+
+  .section-cta
+    +absolute-cta(255px, $cream, $dark-gray, 30px)
+
+
+.section-galerija
+  min-height: 500px
+  //background:
+    color: $light-gray
+    image: url('../IMG/contemporary_china.png')
+    repeat: repeat
+    blend-mode: multiply
+
+  .image-row
+    height: 210px
+    margin: 20px 0
+    display: flex
+
+    [class^="col"]
+      overflow: hidden
+      height: 100%
+      box-sizing: border-box
+      margin-right: 20px
+      padding: 0
+      background:
+        size: cover
+        position: center center
+      &:last-child
+        margin-right: 0
+
+  h2
+    +section-heading($dark-green)
+    margin-bottom: 65px
+
+  img
+    +position(absolute, null null 0 0)
+    height: 500px
+
+  h3
+    +section-subheading($dark-gray, 60px)
+    text-align: right
+
+    &::after
+      +horizontal-line(85px, $dark-gray, 10px, 0, 10px)
+      position: absolute
+      right: 20px
+
+  .section-cta
+    +cta(100%, $dark-green, $cream, 30px)
+
+
+.section-blog
+  min-height: 500px
+  background:
+    color: $flat-orange
+    image: url('../IMG/sayagata-400px.png')
+    repeat: repeat
+    blend-mode: multiply
+
+  .blog-row
+    margin-top: 10px
+
+  h2
+    +section-heading($cream)
+    margin-bottom: 55px
+
+  img
+    width: 100%
+    margin-bottom: 20px
+
+  h3
+    +section-subheading($dark-gray, 0px)
+    text-align: left
+
+    &::after
+      +horizontal-line(85px, $dark-gray, 10px, 0, 0px)
+
+  .section-cta
+    +cta(100%, $cream, $flat-orange, 30px)
+
+  .card
+    transition: $main-transition
+    &:hover
+      box-shadow: $box-dropshadow
+
+  .card-cta
+    +card-cta()
+
+  .card-text
+    margin-top: 10px !important
+
+
+.kontakt
+  min-height: 500px
+  background:
+    color: $dark-green
+    image: url('../IMG/cartographer.png')
+    repeat: repeat
+    blend-mode: multiply
+  margin-bottom: 225px
+
+  h2
+    +section-heading($cream)
+
+  form
+    +display(flex)
+    align-items: center
+    margin-top: 30px
+
+    textarea
+      height: 206px
+
+    label
+      color: $cream
+      margin-left: 10px
+      text-transform: uppercase
+      font-family: $sans-font
+      font-size: 12px
+
+    .send-icon
+      svg
+        transform: scale(0.5)
+        .icon-fill
+          fill: $cream
+          transition: $main-transition
+        &:hover
+          .icon-arrow
+            transform: translateX(2px)
+            transform-origin: left center
+
+  .google-maps
+    min-height: 450px
+
+    img
+      display: block
+      margin: 70px auto 0
+      box-shadow: $box-dropshadow
+
+
+footer
+  min-height: 225px
+  background: $medium-gray
+  position: fixed
+  bottom: 0
+  width: 100vw
+  z-index: -10
+
+  .row
+    margin: 0
+
+  h2
+    text-align: center
+    text-transform: uppercase
+    color: $cream
+    font-weight: bold
+    margin: 40px 0 25px
+
+  .menu
+    ul
+      text-align: center
+      li
+        display: inline
+        font-size: 16px
+        text-transform: uppercase
+        font-family: $sans-font
+        font-weight: bold
+        color: $cream
+        line-height: 60px
+        padding: 0 10px
+
+  small
+    text-align: center
+    color: $cream
+    display: block
+
+

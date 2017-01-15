@@ -1,0 +1,47 @@
+.main-nav
+  position: relative
+  background: $light-blue
+  height: 40px
+  width: 100vw
+  +clearfix
+  box-shadow: $box-dropshadow
+
+
+  .logo
+    float: left
+    margin-left: 20px
+
+    img
+      height: 35px
+      width: auto
+      margin-top: 2.5px
+
+
+  .menu
+    float: right
+    margin-right: 20px
+    ul
+      li
+        display: inline
+        color: $cream
+        font-size: 16px
+        font-weight: bold
+        padding: 0 10px
+        &:last-child
+          display: none
+
+        a
+          font-size: 16px
+          text-transform: uppercase
+          font-family: $sans-font
+          font-weight: bold
+          color: $cream
+          line-height: 40px
+          padding: 0 10px
+          text-decoration: none
+          cursor: pointer
+
+        &.nav-btn
+          transition: $main-transition
+          &:hover
+            text-shadow: $text-dropshadow
