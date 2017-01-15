@@ -49,10 +49,10 @@
             <div class="post-thumbnail" style="background-image: url('<?php the_post_thumbnail_url(); ?>')"></div>
               <article>
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-12">
                   <h3><?php the_title(); ?></h3>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-12">
                   <small><?php the_author(); ?> • <?php the_time('F j, Y'); ?></small>
                 </div>
               </div><!-- END row -->

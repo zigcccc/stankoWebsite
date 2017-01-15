@@ -4,9 +4,14 @@
     image: url("../img/square_bg.png")
     repeat: repeat
     //size: 100px 100px
-  height: calc(100vh - 40px)
+  height: auto
+  padding-bottom: 0
+  //padding-top: 0
   @media screen and (max-width: 767px)
-    height: 100vh
+    height: auto
+  @media screen and (max-width: 767px)
+    padding-top: 5px
+    padding-bottom: 0
 
   box-shadow: $box-dropshadow
 
@@ -28,7 +33,7 @@
       margin: 60px auto 0
       display: block
     @media screen and (max-width: 575px)
-      margin: 20px auto 0
+      margin: 10px auto 0
 
     h1
       color: $cream
@@ -87,14 +92,16 @@
 
 .social-banner
   display: block
-  position: absolute
-  bottom: 0
+  //position: absolute
+  //bottom: 0
   height: 40px
   background: $dark-gray
   width: 100%
   z-index: 100
   @media screen and (max-width: 767px)
     height: auto
+  position: relative
+  margin-top: 40px
   a
     display: block
     &:active
@@ -155,6 +162,8 @@
     max-height: 500px
     transition: $expand-transition
     @media screen and (max-width: 991px)
+      max-height: 350px
+    @media screen and (max-width: 767px)
       display: none
 
   h3
