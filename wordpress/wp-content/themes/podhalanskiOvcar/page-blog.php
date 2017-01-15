@@ -58,7 +58,7 @@
               </div><!-- END row -->
               <div class="row">
                 <div class="col-md-12">
-                  <p><?php echo excerpt(140); ?></p>
+                  <p><?php echo excerpt(100); ?></p>
                 </div>
               </div><!-- END row -->
               <div class="row">
