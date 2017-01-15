@@ -282,6 +282,7 @@
     +display(flex)
     @media screen and (max-width: 575px)
       display: block
+      height: auto
 
     &.last-image-row
       @media screen and (max-width: 575px)
@@ -290,6 +291,9 @@
     [class^="col"]
       overflow: hidden
       height: 100%
+      @media screen and (max-width: 575px)
+        height: 200px
+        margin: 10px 0
       box-sizing: border-box
       margin-right: 20px
       padding: 0
@@ -472,18 +476,29 @@ footer
     font-weight: bold
     margin: 40px 0 25px
 
-  .menu
+  .menu-main-menu-container
+    margin-top: 20px
     ul
+      list-style: none
       text-align: center
+      padding: 0
+      +display(flex)
+      +justify-content(space-around)
+
       li
-        display: inline
-        font-size: 16px
-        text-transform: uppercase
-        font-family: $sans-font
-        font-weight: bold
-        color: $cream
-        line-height: 60px
-        padding: 0 10px
+        width: 100%
+
+        a
+          color: $cream
+          text-transform: uppercase
+          font-size: 16px
+          padding: 5px 20px
+          text-align: center
+          font-weight: bold
+          +transition(all 200ms ease-in-out)
+          &:hover
+            text-decoration: none
+            text-shadow: $text-dropshadow
 
   small
     text-align: center
