@@ -7,6 +7,7 @@
 </head>
 <body <?php body_class(); ?>>
   <nav class="main-nav">
+    <div class="container">
       <div class="logo">
         <a href="<?php echo get_bloginfo('url'); ?>">
           <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png">
@@ -14,6 +15,7 @@
       </div>
       <?php wp_nav_menu(); ?>
       <div class="mobile-menu-toggle"><i class="material-icons">menu</i></div>
+    </div><!-- END container -->
   </nav>
 
 <?php ?>

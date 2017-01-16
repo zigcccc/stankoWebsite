@@ -1,9 +1,9 @@
 <?php while(have_rows('static_section')): the_row(); ?>
   <?php
-    $bg_texture = bg_texture(get_sub_field('section_bg_texture'));
+    //$bg_texture = bg_texture(get_sub_field('section_bg_texture'));
     $bg_color = get_sub_field('section_bg_color');
   ?>
-  <div id="<?php echo section_id(get_sub_field('section_title')); ?>" class="jumbotron jumbotron-fluid static-section"<?php echo ' style="background-color:'. $bg_color .'; background-image: url('. get_template_directory_uri() . '/img/' .  $bg_texture .')"';?>>
+  <div id="<?php echo section_id(get_sub_field('section_title')); ?>" class="jumbotron jumbotron-fluid static-section"<?php echo ' style="background-color:'. $bg_color . '"';?>>
     <div class="container">
       <?php //Use $static_row to assign odd or even number to section ?>
       <h2<?php if(even($static_row)){ echo ' class="float-md-right"'; } ?>><?php echo get_sub_field('section_title'); ?></h2>
