@@ -1,6 +1,10 @@
 .page-galerija
   .main-nav
     background: $dark-green
+    .menu-main-menu-container
+      @media screen and (max-width: 575px)
+        &.active-mobile-menu
+          background: $dark-green
 
   .galerija-jumbotron
     height: auto
@@ -74,3 +78,5 @@
       max-height: none
       z-index: 1000
       position: absolute
+      max-width: 100%
+      height: auto
