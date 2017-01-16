@@ -2,9 +2,13 @@
   position: relative
   background: $light-blue
   height: 40px
-  width: 100vw
+  //width: 100vw
   +clearfix
   box-shadow: $box-dropshadow
+  .container
+    @media screen and (max-width: 767px)
+      margin-left: 0
+      padding-left: 0
 
 
   .logo
