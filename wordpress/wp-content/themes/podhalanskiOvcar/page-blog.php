@@ -36,15 +36,11 @@
         $counter++;
 
         //Vars
-        if($counter % 2 == 0) {
-          $bg_texture = ' style="background-image: url(\' ' . get_template_directory_uri() . '/img/contemporary_china.png\')"';
-        }
-        else {
-          $bg_texture = ' style="background-image: url(\' ' . get_template_directory_uri() . '/img/sayagata-400px.png\')"';
-        }
+        $bg_texture = ' style="background-image: url(\' ' . get_template_directory_uri() . '/img/sayagata-400px.png\')"';
+
 
         ?>
-        <div class="jumbotron jumbotron-fluid blog-jumbotron<?php if($counter == $section_counter){ echo ' last-elem'; } ?>"<?php echo $bg_texture; ?>>
+        <div class="jumbotron jumbotron-fluid blog-jumbotron<?php if($counter == $section_counter){ echo ' last-elem'; } ?>"<?php if($counter % 2 != 0){ echo $bg_texture; }?>>
           <div class="container">
             <div class="post-thumbnail" style="background-image: url('<?php the_post_thumbnail_url(); ?>')"></div>
               <article>

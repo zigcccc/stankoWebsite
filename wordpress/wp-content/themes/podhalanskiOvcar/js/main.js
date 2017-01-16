@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
     $('.expand-gallery').on('click', function(){
       var $this = $(this);
       var parentElem = $this.parents('article');
-      console.log(parentElem);
+      
       var hiddenRows = parentElem.find('.row-images-extra');
 
       hiddenRows.toggleClass('show');
@@ -68,9 +68,6 @@ jQuery(document).ready(function($) {
     function scrollTo(btnToClick, elem, duration){
         var button = $(btnToClick);
         var elemToScroll = $(elem);
-
-        console.log(button);
-        console.log(elemToScroll);
 
         button.click(function() {
             $('html, body').animate({

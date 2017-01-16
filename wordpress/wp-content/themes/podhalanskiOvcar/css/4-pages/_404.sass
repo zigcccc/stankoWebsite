@@ -1,0 +1,33 @@
+.error404
+  background: $cream
+  .main-nav
+    background: $dark-gray
+    .menu-main-menu-container
+      @media screen and (max-width: 575px)
+        &.active-mobile-menu
+          background: $dark-gray
+
+  footer
+    display: none
+
+  h2
+    +section-heading($dark-gray)
+    margin-top: 30px
+
+  .page-icons
+    text-align: center
+    margin-top: 30px
+
+    .page-icon
+      .material-icons
+        font-size: 105px
+        color: $dark-gray
+
+    a
+      color: $flat-orange
+      text-transform: uppercase
+      font-weight: bold
+      font-family: $sans-font
+      &:hover
+        text-shadow: $text-dropshadow
+        text-decoration: none
